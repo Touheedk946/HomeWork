@@ -1,8 +1,8 @@
-package JavaSimple.Pyramid;
+package Pyramid_Programs;
 
 import java.util.Scanner;
 
-public class PyramidFor_1X_WhileLoop {
+public class PyramidFor_1X_DoWhileLoop {
     public static void main(String[] args) {
         System.out.println("Enter Number of Rows");
         Scanner sc = new Scanner(System.in);
@@ -14,15 +14,15 @@ public class PyramidFor_1X_WhileLoop {
         int row = 0;
         int number_multiplyBy = 0;  // Start from 0
 
-        while (row < n) {
+        do {
             int col = 0;
-            while (col <= row) {
+            do {
                 System.out.print(number_multiplyBy + "\t");
-                number_multiplyBy = number_multiplyBy + x;  // Increment by X
-                col++;
-            }
+                number_multiplyBy = number_multiplyBy + x; //1
+                col++;     //1
+            } while (col <= row);
             System.out.println();
             row++;
-        }
+        } while (row < n);
     }
 }

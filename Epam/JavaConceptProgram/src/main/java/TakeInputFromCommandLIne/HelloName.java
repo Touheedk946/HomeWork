@@ -1,4 +1,4 @@
-package JavaSimple.TakeInputFromCommandLIne;
+package TakeInputFromCommandLIne;
 /*
     To Run this program follow given commands.
     javac HelloName.java -- > to compile the program

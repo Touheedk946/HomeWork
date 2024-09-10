@@ -1,4 +1,4 @@
-package JavaSimple.TakeInputFromCommandLIne;
+package TakeInputFromCommandLIne;
 
 public class Calculator {
     public static void main(String[] args) {

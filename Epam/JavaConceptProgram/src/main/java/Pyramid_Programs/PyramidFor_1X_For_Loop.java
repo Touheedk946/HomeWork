@@ -1,4 +1,4 @@
-package JavaSimple.Pyramid;
+package Pyramid_Programs;
 
 import java.util.Scanner;
 

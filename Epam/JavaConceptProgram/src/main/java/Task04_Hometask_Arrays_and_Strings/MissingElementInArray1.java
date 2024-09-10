@@ -1,4 +1,4 @@
-package JavaSimple.Arrays;
+package Arrays;
 
 public class MissingElementInArray1 {
     public static void main(String[] args) {

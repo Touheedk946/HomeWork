@@ -1,4 +1,4 @@
-package org.oops.bouquet;
+package bouquet;
 
 public class Lily extends Flower {
     public Lily() {

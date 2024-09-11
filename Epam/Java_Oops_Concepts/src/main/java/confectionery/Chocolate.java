@@ -1,4 +1,4 @@
-package org.oops.confectionery;
+package confectionery;
 
 public class Chocolate extends Confectionery {
     private String type;

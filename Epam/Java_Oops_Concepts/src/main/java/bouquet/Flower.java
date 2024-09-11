@@ -1,4 +1,4 @@
-package org.oops.bouquet;
+package bouquet;
 
 abstract class Flower {
     private String name;

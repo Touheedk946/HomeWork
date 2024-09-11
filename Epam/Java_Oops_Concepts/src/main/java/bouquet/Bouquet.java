@@ -1,4 +1,4 @@
-package org.oops.bouquet;
+package bouquet;
 import java.util.ArrayList;
 import java.util.List;
 public class Bouquet {

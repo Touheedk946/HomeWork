@@ -1,4 +1,4 @@
-package org.oops.bouquet;
+package bouquet;
 
 public class MainClass_FlowerShop {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.oops.appliance;
+package appliance;
 
 public class Main {
     public static void main(String[] args) {

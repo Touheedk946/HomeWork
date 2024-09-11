@@ -1,4 +1,4 @@
-package org.oops.PizzaShop;
+package PizzaShop;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

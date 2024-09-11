@@ -1,4 +1,4 @@
-package org.oops.confectionery;
+package confectionery;
 
 abstract class Confectionery {
     private String name;

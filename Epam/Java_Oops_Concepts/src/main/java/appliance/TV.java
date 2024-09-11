@@ -1,4 +1,4 @@
-package org.oops.appliance;
+package appliance;
 
 public class TV extends Appliance {
 

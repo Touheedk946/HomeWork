@@ -1,4 +1,4 @@
-package org.oops.confectionery;
+package confectionery;
 
 public class Sweet extends Confectionery {
     private String flavor;

@@ -1,4 +1,4 @@
-package org.oops.confectionery;
+package confectionery;
 
 import java.util.Comparator;
 

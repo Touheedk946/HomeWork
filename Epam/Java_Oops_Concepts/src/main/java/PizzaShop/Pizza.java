@@ -1,4 +1,4 @@
-package org.oops.PizzaShop;
+package PizzaShop;
 
 
 public class Pizza {

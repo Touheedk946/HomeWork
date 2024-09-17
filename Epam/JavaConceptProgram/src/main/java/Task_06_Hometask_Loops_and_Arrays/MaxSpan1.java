@@ -1,6 +1,6 @@
 package Task_06_Hometask_Loops_and_Arrays;
 
-public class MaxSpan {
+public class MaxSpan1 {
 
     public static int maxSpan(int[] nums) {
         int maxSpan = 0;

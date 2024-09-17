@@ -1,10 +1,10 @@
 package Task_05_Hometask_Language_Constructs;
 
-public class MaxBlock {
+public class MaxBlock9 {
     private String str;
 
     // Constructor to initialize the string
-    public MaxBlock(String str) {
+    public MaxBlock9(String str) {
         this.str = str;
     }
 
@@ -36,14 +36,14 @@ public class MaxBlock {
 
     public static void main(String[] args) {
         // Create objects and test the maxBlock function
-        MaxBlock example1 = new MaxBlock("hoopla");
+        MaxBlock9 example1 = new MaxBlock9("hoopla");
         System.out.println(example1.getMaxBlock());  // Output: 2
 
-        MaxBlock example2 = new MaxBlock("abbCCCddBBBxx");
+        MaxBlock9 example2 = new MaxBlock9("abbCCCddBBBxx");
         System.out.println(example2.getMaxBlock());  // Output: 3
 
-        MaxBlock example3 = new MaxBlock("222222");
-        System.out.println(example3.getMaxBlock());  // Output: 0
+        MaxBlock9 example3 = new MaxBlock9("222222");
+        System.out.println(example3.getMaxBlock());  // Output: 6
     }
 }
 

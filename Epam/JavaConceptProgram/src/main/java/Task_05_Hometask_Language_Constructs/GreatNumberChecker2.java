@@ -1,11 +1,11 @@
 package Task_05_Hometask_Language_Constructs;
 
-public class GreatNumberChecker {
+public class GreatNumberChecker2 {
     private int a;
     private int b;
 
     // Constructor to initialize the integers
-    public GreatNumberChecker(int a, int b) {
+    public GreatNumberChecker2(int a, int b) {
         this.a = a;
         this.b = b;
     }
@@ -26,16 +26,16 @@ public class GreatNumberChecker {
 
     public static void main(String[] args) {
         // Example usage
-        GreatNumberChecker checker1 = new GreatNumberChecker(4, 2);
+        GreatNumberChecker2 checker1 = new GreatNumberChecker2(4, 2);
         System.out.println("Result for (4, 2): " + checker1.isGreatNumber());
 
-        GreatNumberChecker checker2 = new GreatNumberChecker(6, 2);
+        GreatNumberChecker2 checker2 = new GreatNumberChecker2(6, 2);
         System.out.println("Result for (6, 2): " + checker2.isGreatNumber());
 
-        GreatNumberChecker checker3 = new GreatNumberChecker(3, 9);
+        GreatNumberChecker2 checker3 = new GreatNumberChecker2(3, 9);
         System.out.println("Result for (3, 9): " + checker3.isGreatNumber());
 
-        GreatNumberChecker checker4 = new GreatNumberChecker(3, 3);
+        GreatNumberChecker2 checker4 = new GreatNumberChecker2(3, 3);
         System.out.println("Result for (3, 3): " + checker4.isGreatNumber());
     }
 }

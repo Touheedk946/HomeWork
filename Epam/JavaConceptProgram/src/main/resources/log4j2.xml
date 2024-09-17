@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console Appender with custom user-specific format -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- Custom log format that includes userId from the MDC -->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [UserID: %X{userId}] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender to store logs in a file -->
+        <File name="FileLogger" fileName="logs/application.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [UserID: %X{userId}] %-5level %logger{36} - %msg%n"/>
+        </File>
+
+        <!-- Rolling File Appender to store logs with log rotation -->
+        <RollingFile name="RollingFileLogger" fileName="logs/rolling-application.log"
+                     filePattern="logs/rolling-application-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [UserID: %X{userId}] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+            <AppenderRef ref="RollingFileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>

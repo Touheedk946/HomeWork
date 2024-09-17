@@ -2,7 +2,7 @@ package Task_05_Hometask_Language_Constructs;
 
 import java.util.Scanner;
 
-public class InOrderCheck {
+public class InOrderCheck5 {
 
     // Method to check if the numbers are in order
     public static boolean inOrder(int a, int b, int c, boolean bOk) {

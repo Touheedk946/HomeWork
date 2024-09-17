@@ -1,6 +1,6 @@
 package Task_06_Hometask_Loops_and_Arrays;
 
-public class LinearIn {
+public class LinearIn5 {
 
     public static boolean linearIn(int[] outer, int[] inner) {
         int outerIndex = 0;

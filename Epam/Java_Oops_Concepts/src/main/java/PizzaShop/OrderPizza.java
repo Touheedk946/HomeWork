@@ -19,7 +19,7 @@ public class OrderPizza {
     public double calculateTotalCost() {
         double totalCost = base.getCost();
         for (Topping topping : toppings) {
-            totalCost += totalCost + topping.getCost();
+            totalCost = totalCost + topping.getCost();
         }
         return totalCost;
     }

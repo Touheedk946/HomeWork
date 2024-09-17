@@ -1,4 +1,4 @@
-package Arrays;
+package Task04_Hometask_Arrays_and_Strings;
 
 public class MissingElementInArray1 {
     public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class MissingElementInArray1 {
 
         // XOR all elements in the array
         for (int num : arr) {
-            xorArray ^= num;
+            xorArray ^= num;    // 0^1 to all
         }
 
         // XOR all numbers from 1 to n

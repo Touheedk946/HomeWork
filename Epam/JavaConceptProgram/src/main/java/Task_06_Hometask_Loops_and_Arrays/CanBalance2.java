@@ -1,6 +1,6 @@
 package Task_06_Hometask_Loops_and_Arrays;
 
-public class CanBalance {
+public class CanBalance2 {
 
     public static boolean canBalance(int[] nums) {
         int totalSum = 0;

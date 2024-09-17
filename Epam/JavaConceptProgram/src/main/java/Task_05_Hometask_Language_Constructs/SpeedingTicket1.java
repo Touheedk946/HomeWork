@@ -16,12 +16,12 @@ import java.util.Scanner;
 
      */
 
-public class SpeedingTicket {
+public class SpeedingTicket1 {
     private int speed;
     private boolean isBirthday;
 
     // Constructor
-    public SpeedingTicket(int speed, boolean isBirthday) {
+    public SpeedingTicket1(int speed, boolean isBirthday) {
         this.speed = speed;
         this.isBirthday = isBirthday;
     }
@@ -52,7 +52,7 @@ public class SpeedingTicket {
         boolean isBirthday = isBirthdayInput.equals("yes");
 
         // Create an instance of SpeedingTicket
-        SpeedingTicket ticket = new SpeedingTicket(speed, isBirthday);
+        SpeedingTicket1 ticket = new SpeedingTicket1(speed, isBirthday);
 
         // Output the result
         System.out.println("Ticket type: " + ticket.getTicketType());

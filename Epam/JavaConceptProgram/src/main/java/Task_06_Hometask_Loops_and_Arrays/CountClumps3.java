@@ -1,6 +1,6 @@
 package Task_06_Hometask_Loops_and_Arrays;
 
-public class CountClumps {
+public class CountClumps3 {
 
     public static int countClumps(int[] nums) {
         int clumpCount = 0;

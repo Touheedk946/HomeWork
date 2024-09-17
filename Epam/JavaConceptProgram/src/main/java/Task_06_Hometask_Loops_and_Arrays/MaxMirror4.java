@@ -1,6 +1,6 @@
 package Task_06_Hometask_Loops_and_Arrays;
 
-public class MaxMirror {
+public class MaxMirror4 {
 
     public static int maxMirror(int[] nums) {
         int maxMirrorLength = 0;

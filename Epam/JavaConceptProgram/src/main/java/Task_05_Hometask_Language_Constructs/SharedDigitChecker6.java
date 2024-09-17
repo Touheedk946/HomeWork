@@ -1,7 +1,7 @@
 package Task_05_Hometask_Language_Constructs;
 import java.util.Scanner;
 
-public class SharedDigitChecker {
+public class SharedDigitChecker6 {
 
     // Method to check if two numbers share any digits
     public static boolean shareDigit(int num1, int num2) {

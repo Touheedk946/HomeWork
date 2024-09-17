@@ -2,21 +2,21 @@ package Task_05_Hometask_Language_Constructs;
 
 import java.util.Scanner;
 
-public class PartyOutcome {
+public class PartyOutcome3 {
     private int tea;
     private int candy;
 
     // Constructor to initialize tea and candy values
-    public PartyOutcome(int tea, int candy) {
+    public PartyOutcome3(int tea, int candy) {
         this.tea = tea;
         this.candy = candy;
     }
 
     // Method to determine the party outcome
     public int getPartyOutcome() {
-        if (tea < 5 || candy < 5) {
+        if (tea < 5 || candy < 5) { // input less then 5
             return 0; // Bad party
-        } else if (tea >= 2 * candy || candy >= 2 * tea) {
+        } else if (tea >= 2 * candy || candy >= 2 * tea) { //
             return 2; // Great party
         } else {
             return 1; // Good party
@@ -34,7 +34,7 @@ public class PartyOutcome {
         int candy = sc.nextInt();
 
         // Create an instance of PartyOutcome
-        PartyOutcome party = new PartyOutcome(tea, candy);
+        PartyOutcome3 party = new PartyOutcome3(tea, candy);
 
         // Output the party outcome
         int outcome = party.getPartyOutcome();

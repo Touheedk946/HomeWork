@@ -27,7 +27,7 @@ public class MaxSpan1 {
     }
 
     public static void main(String[] args) {
-        int[] arr1 = {1, 2, 1, 1, 3};
+        int[] arr1 = {1, 2, 0, 1, 3};
         int[] arr2 = {1, 4, 2, 1, 4, 1, 4};
         int[] arr3 = {1, 4, 2, 1, 4, 4, 4};
 

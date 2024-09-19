@@ -44,3 +44,13 @@ java.lang.ArithmeticException: / by zero
 2024-09-17 22:48:07 [UserID: User2] INFO  Task_07_HometaskLoggers.UserSpecificLogging - Starting another process.
 2024-09-17 22:48:07 [UserID: User2] INFO  Task_07_HometaskLoggers.UserSpecificLogging - Performing action: Add new product
 2024-09-17 22:48:07 [UserID: ] INFO  Task_07_HometaskLoggers.UserSpecificLogging - Application finished.
+2024-09-19 10:36:26 [UserID: ] DEBUG Task_07_HometaskLoggers.Test - This is a DEBUG message
+2024-09-19 10:36:26 [UserID: ] INFO  Task_07_HometaskLoggers.Test - This is an INFO message
+2024-09-19 10:36:26 [UserID: ] WARN  Task_07_HometaskLoggers.Test - This is a WARN message
+2024-09-19 10:36:26 [UserID: ] ERROR Task_07_HometaskLoggers.Test - This is an ERROR message
+2024-09-19 10:36:26 [UserID: ] FATAL Task_07_HometaskLoggers.Test - This is a FATAL message
+2024-09-19 10:37:55 [UserID: ] DEBUG Task_07_HometaskLoggers.Test - This is a DEBUG message
+2024-09-19 10:37:55 [UserID: ] INFO  Task_07_HometaskLoggers.Test - This is an INFO message
+2024-09-19 10:37:55 [UserID: ] WARN  Task_07_HometaskLoggers.Test - This is a WARN message
+2024-09-19 10:37:55 [UserID: ] ERROR Task_07_HometaskLoggers.Test - This is an ERROR message
+2024-09-19 10:37:55 [UserID: ] FATAL Task_07_HometaskLoggers.Test - This is a FATAL message

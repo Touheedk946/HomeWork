@@ -25,10 +25,10 @@ public class LotteryTicket4 {
         }
 
         // Condition 2: If the sum of ab is exactly 10 more than either bc or ac
-        // Need to take some suggestions on this
-//        if (ab == bc + 10 || ab == ac + 10) {
-//            return 5;
-//        }
+        // Need to take some suggestions on this // a 25, b , 25, c 15
+        if (ab == bc + 10 || ab == ac + 10) {
+            return 5;
+        }
 
         // Condition 3: If none of the above conditions are met, return 0
         return 0;

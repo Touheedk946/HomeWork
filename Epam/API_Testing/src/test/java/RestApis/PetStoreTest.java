@@ -41,5 +41,5 @@ public class PetStoreTest {
                 .body("name", equalTo("snoopie"))
                 .body("status", equalTo("pending"));
     }
-    
+
 }

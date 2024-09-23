@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class ArrayListSolution {
+public class ArrayListSolution_Not_Solved {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -3,7 +3,7 @@ package Hometask_Stack_04;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Solution {
+public class BalanceBrances {
     // Function to check if the string is balanced
     private static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<>();
@@ -31,6 +31,9 @@ public class Solution {
                         return false;
                     }
                     break;
+                // Ignore other characters
+                default:
+                    break;
             }
         }
 
@@ -40,14 +43,17 @@ public class Solution {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter strings to check for balanced parentheses (type 'exit' to quit):");
 
-        // Read and process each line of input until EOF
-        while (scanner.hasNextLine()) {
+        // Read and process each line of input until "exit" is entered
+        while (true) {
             String input = scanner.nextLine();
-            System.out.println(isBalanced(input));
+            if (input.equalsIgnoreCase("exit")) {
+                break;
+            }
+            System.out.println("Is balanced: " + isBalanced(input));
         }
 
         scanner.close();
     }
 }
-

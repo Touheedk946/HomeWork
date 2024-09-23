@@ -2,14 +2,13 @@ package Hometask_Comparator_02;
 
 import java.util.Comparator;
 
-public class Checker implements Comparator<Player> {
+class Checker implements Comparator<Player> {
     @Override
-    public int compare(Player a, Player b) {
-        // First, compare by score in descending order
-        if (b.score != a.score) {
-            return Integer.compare(b.score, a.score);
+    public int compare(Player p1, Player p2) {
+        // Compare by score descending, then by name ascending
+        if (p1.getScore() != p2.getScore()) {
+            return Integer.compare(p2.getScore(), p1.getScore());
         }
-        // If scores are equal, compare by name in alphabetical order
-        return a.name.compareTo(b.name);
+        return p1.getName().compareTo(p2.getName());
     }
 }

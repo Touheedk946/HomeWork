@@ -2,7 +2,7 @@ package Task_6HometaskAll;
 
 import java.util.*;
 
-public class CollectionsDemo {
+public class CollectionsInterfaces {
     public static void main(String[] args) {
         // a) ArrayList
         List<String> arrayList = new ArrayList<>();

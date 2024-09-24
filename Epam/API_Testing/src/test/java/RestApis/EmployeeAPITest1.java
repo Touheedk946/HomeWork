@@ -8,8 +8,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.greaterThan;
 
-public class EmployeeAPITest1 {
 
+public class EmployeeAPITest1 {
+    int employeeId;
     String baseURI = "http://example.com/api/v1"; // Replace with the actual API base URI
 
     // This test will fetch the list of employees and verify the count.
@@ -23,8 +24,10 @@ public class EmployeeAPITest1 {
                 .get("/employees")
                 .then()
                 .statusCode(200)
-                .extract()
-                .response();
+                .statusLine("HTTP/1.1 200 OK")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .extract().response();
 
         // Get the count of employees
         int initialCount = response.jsonPath().getList("data").size();
@@ -59,31 +62,105 @@ public class EmployeeAPITest1 {
                 "  \"age\": \"30\"\n" +
                 "}";
 
-        // POST request to create a new employee
-        given()
+        // Create employee and capture employeeId
+        Response response = given()
                 .header("Content-Type", "application/json")
                 .body(requestBody)
                 .when()
                 .post("/employees")
                 .then()
-                .statusCode(201) // Verify that employee is created successfully
-                .body("message", equalTo("Employee created"));
+                .statusCode(201)
+                .statusLine("HTTP/1.1 201 Created")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .body("message", equalTo("Employee created"))
+                .extract().response();
 
-        // After creation, verify that the count of employees has increased by 1
-        Response finalResponse = given()
+
+        employeeId = response.jsonPath().getInt("data.id"); // Store employee ID for further operations
+
+        // Verify count increased by 1
+        int finalCount = given().when().get("/employees").jsonPath().getList("data").size();
+        assert finalCount == initialCount + 1 : "Employee count did not increase by 1";
+    }
+
+    // Step 3: Get the details of the employee created in step 2 and verify
+    @Test(priority = 3)
+    public void getEmployeeDetailsAndVerify() {
+        given()
                 .when()
-                .get("/employees")
+                .get("/employees/" + employeeId)
                 .then()
                 .statusCode(200)
-                .extract()
-                .response();
-
-        int finalCount = finalResponse.jsonPath().getList("data").size();
-
-        // Verify the count has increased by 1
-        assert finalCount == initialCount + 1 : "Employee count did not increase by 1";
-
-        System.out.println("Employee created successfully, count increased by 1");
+                .statusLine("HTTP/1.1 200 OK")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .body("data.id", equalTo(employeeId))
+                .body("data.name", equalTo("John Doe"))
+                .body("data.salary", equalTo("50000"))
+                .body("data.age", equalTo("30"));
     }
+
+    // Step 4: Update employee details (salary and age) and verify
+    @Test(priority = 4)
+    public void updateEmployeeDetailsAndVerify() {
+        String updatedRequestBody = "{\n" +
+                "  \"name\": \"John Doe\",\n" +
+                "  \"salary\": \"60000\",\n" +
+                "  \"age\": \"35\"\n" +
+                "}";
+
+        given()
+                .header("Content-Type", "application/json")
+                .body(updatedRequestBody)
+                .when()
+                .put("/employees/" + employeeId)
+                .then()
+                .statusCode(200)
+                .statusLine("HTTP/1.1 200 OK")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .body("message", equalTo("Employee updated"));
+    }
+
+    // Step 5: Get the details of the updated employee and verify the changes
+    @Test(priority = 5)
+    public void getUpdatedEmployeeDetailsAndVerify() {
+        given()
+                .when()
+                .get("/employees/" + employeeId)
+                .then()
+                .statusCode(200)
+                .statusLine("HTTP/1.1 200 OK")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .body("data.id", equalTo(employeeId))
+                .body("data.name", equalTo("John Doe"))
+                .body("data.salary", equalTo("60000"))
+                .body("data.age", equalTo("35"));
+    }
+
+    // Step 6: Delete the employee created in step 2 and verify
+    @Test(priority = 6)
+    public void deleteEmployeeAndVerify() {
+        // Get initial count before delete
+        int initialCount = given().when().get("/employees").jsonPath().getList("data").size();
+
+        // Perform DELETE request
+        given()
+                .when()
+                .delete("/employees/" + employeeId)
+                .then()
+                .statusCode(200)
+                .statusLine("HTTP/1.1 200 OK")
+                .contentType("application/json")
+                .header("Content-Encoding", "gzip")
+                .body("message", equalTo("Employee deleted"));
+
+        // Verify count decreased by 1
+        int finalCount = given().when().get("/employees").jsonPath().getList("data").size();
+        assert finalCount == initialCount - 1 : "Employee count did not decrease by 1";
+    }
+
 }
 

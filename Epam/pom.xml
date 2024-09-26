@@ -13,6 +13,7 @@
         <module>JavaConceptProgram</module>
         <module>Collections</module>
         <module>API_Testing</module>
+        <module>DesignPatterns</module>
     </modules>
 
     <properties>

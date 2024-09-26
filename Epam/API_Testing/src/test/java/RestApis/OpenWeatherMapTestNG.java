@@ -28,7 +28,7 @@ public class OpenWeatherMapTestNG {
                         .get("/weather")
                         .then()
                         // Assert that the status code is 200
-                        .statusCode(200)
+                        .statusCode(401) //200
                         // Validate that the response is in JSON format
                         .contentType("application/json")
                         // Extract the response

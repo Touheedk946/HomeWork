@@ -7,6 +7,8 @@ public class BuilderPatternDemo {
                 .build();
         System.out.println(basicBicycle);
 
+
+
         // Building a bicycle with some additional options
         Bicycle customBicycle = new Bicycle.Builder("Large", "Blue")
                 .withGears(true)

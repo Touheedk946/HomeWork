@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Map;
 
-public class Solution_Inprogress {
+public class Solution_Inprogress_Incomplete {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

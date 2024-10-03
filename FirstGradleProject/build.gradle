@@ -1,5 +1,6 @@
 plugins {
     id 'java' // Java plugin for compiling and running Java classes
+    id 'application' // Add this line to enable the run task
     id 'groovy' // Optional: Include this if you're using Groovy in your project
 }
 

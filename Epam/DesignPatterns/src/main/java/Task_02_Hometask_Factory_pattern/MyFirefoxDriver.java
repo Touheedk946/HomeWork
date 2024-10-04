@@ -11,7 +11,7 @@ public class MyFirefoxDriver implements Browser {
     @Override
     public void initialize() {
         // Set the path for the GeckoDriver executable
-        System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "src/main/geckodriver");
 
         // Configure Firefox options
         FirefoxOptions options = new FirefoxOptions();

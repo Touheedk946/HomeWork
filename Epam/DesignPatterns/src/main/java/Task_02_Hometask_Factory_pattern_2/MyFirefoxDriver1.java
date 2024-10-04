@@ -8,7 +8,7 @@ public class MyFirefoxDriver1 implements Browser {
 
     @Override
     public void initialize() {
-        System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "src/main//geckodriver");
         driver = new FirefoxDriver();
         System.out.println("Firefox browser initialized with basic configuration");
     }

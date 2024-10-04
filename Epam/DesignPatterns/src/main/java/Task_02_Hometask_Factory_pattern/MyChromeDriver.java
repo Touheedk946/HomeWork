@@ -11,7 +11,7 @@ public class MyChromeDriver implements Browser {
     @Override
     public void initialize() {
         // Set the path for the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/chromedriver");
 
         // Configure Chrome options
         ChromeOptions options = new ChromeOptions();

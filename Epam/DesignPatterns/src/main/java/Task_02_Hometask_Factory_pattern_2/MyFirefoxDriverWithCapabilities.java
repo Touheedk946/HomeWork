@@ -9,7 +9,7 @@ public class MyFirefoxDriverWithCapabilities implements Browser {
 
     @Override
     public void initialize() {
-        System.setProperty("webdriver.gecko.driver", "path/to/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "src/main/geckodriver");
 
         FirefoxOptions options = new FirefoxOptions();
         options.addPreference("dom.webnotifications.enabled", false);

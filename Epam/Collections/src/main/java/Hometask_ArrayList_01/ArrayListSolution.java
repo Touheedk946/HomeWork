@@ -2,7 +2,7 @@ package Hometask_ArrayList_01;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ArrayListSolution_Not_Solved {
+public class ArrayListSolution {
     public static void main(String[] args) {
         // Create a Scanner object to read input from the console
         Scanner scanner = new Scanner(System.in);

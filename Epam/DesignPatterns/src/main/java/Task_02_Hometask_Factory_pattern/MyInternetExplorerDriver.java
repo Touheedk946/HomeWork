@@ -11,7 +11,7 @@ public class MyInternetExplorerDriver implements Browser {
     @Override
     public void initialize() {
         // Set the path for the IEDriverServer executable
-        System.setProperty("webdriver.ie.driver", "path/to/IEDriverServer");
+        System.setProperty("webdriver.ie.driver", "src/main/IEDriverServer");
 
         // Configure IE options
         InternetExplorerOptions options = new InternetExplorerOptions();

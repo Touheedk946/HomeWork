@@ -8,7 +8,7 @@ public class MyChromeDriver1 implements Browser {
 
     @Override
     public void initialize() {
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/chromedriver");
         driver = new ChromeDriver();
         System.out.println("Chrome browser initialized with basic configuration");
     }

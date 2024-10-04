@@ -1,0 +1,33 @@
+plugins {
+    id 'java' // Java plugin for compiling and running Java classes
+    id 'application' // Add this line to enable the run task
+    id 'groovy' // Optional: Include this if you're using Groovy in your project
+}
+
+
+repositories {
+    mavenCentral() // Use Maven Central for downloading dependencies
+}
+
+dependencies {
+    // Cucumber dependencies for Java and JUnit integration
+    testImplementation 'io.cucumber:cucumber-java:7.12.1'
+    testImplementation 'io.cucumber:cucumber-junit:7.12.1'
+
+    // Optional: Include Cucumber Spring dependency if you're integrating with Spring framework
+    testImplementation 'io.cucumber:cucumber-spring:7.12.1'
+
+    // JUnit 5 dependencies
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    // Groovy dependencies for using Groovy classes in your project (not for Cucumber)
+    implementation 'org.codehaus.groovy:groovy:3.0.9'
+}
+
+test {
+    useJUnitPlatform() // Enables JUnit 5 platform for running tests
+    testLogging {
+        events "passed", "skipped", "failed" // Log test events in the console
+    }
+}

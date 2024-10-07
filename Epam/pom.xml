@@ -14,6 +14,8 @@
         <module>Collections</module>
         <module>API_Testing</module>
         <module>DesignPatterns</module>
+        <module>Jira_Test</module>
+        <module>BDD</module>
     </modules>
 
     <properties>

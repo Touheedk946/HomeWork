@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Epam/API_Testing/src/main/java"/>
+	<classpathentry kind="src" path="Epam/API_Testing/src/test/java"/>
+	<classpathentry kind="src" path="Epam/Collections/src/main/java"/>
+	<classpathentry kind="src" path="Epam/DesignPatterns/src/main/java"/>
+	<classpathentry kind="src" path="Epam/DesignPatterns/src/test/java"/>
+	<classpathentry kind="src" path="Epam/Java_Oops_Concepts/src/main/java"/>
+	<classpathentry kind="src" path="Epam/JavaConceptProgram/src/main/java"/>
+	<classpathentry kind="src" path="Epam/Jira_Test/src/main/java"/>
+	<classpathentry kind="src" path="FirstGradleProject/src/main/java"/>
+	<classpathentry kind="src" path="FirstGradleProject/src/test/java"/>
+	<classpathentry kind="src" path="SampleCucumberWithGradle/src/main/java"/>
+	<classpathentry kind="src" path="SampleCucumberWithGradle/src/test/java"/>
+	<classpathentry kind="lib" path="Epam/API_Testing/target/API_Testing-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="Epam/Collections/target/Collections-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="Epam/Java_Oops_Concepts/target/Java_Oops_Concepts-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="Epam/JavaConceptProgram/target/JavaConceptProgram-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="FirstGradleProject/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="SampleCucumberWithGradle/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="Epam/API_Testing/target/classes"/>
+</classpath>

@@ -3,33 +3,56 @@ package JiraAutomation;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-import org.json.JSONObject;
 
 public class CreateDefect {
 
     public static String createDefect() {
-        JSONObject defectPayload = new JSONObject();
-        defectPayload.put("fields", new JSONObject()
-                .put("project", new JSONObject().put("key", "PROJ_KEY")) // Replace with your Project Key
-                .put("summary", "Defect created using API")
-                .put("description", "Creating a defect through automation")
-                .put("issuetype", new JSONObject().put("name", "Bug")) // Defect type can be "Bug", "Task", etc.
-        );
+        // JSON payload as a raw string
+        String jsonPayload = "{\n" +
+                "    \"fields\": {\n" +
+                "        \"project\": {\n" +
+                "            \"key\": \"SCRUM\"\n" +
+                "        },\n" +
+                "        \"issuetype\": {\n" +
+                "            \"id\": \"10001\"\n" +
+                "        },\n" +
+                "        \"summary\": \"created via REST API Automation\",\n" +
+                "        \"description\": {\n" +
+                "            \"type\": \"doc\",\n" +
+                "            \"version\": 1,\n" +
+                "            \"content\": [\n" +
+                "                {\n" +
+                "                    \"type\": \"paragraph\",\n" +
+                "                    \"content\": [\n" +
+                "                        {\n" +
+                "                            \"type\": \"text\",\n" +
+                "                            \"text\": \"description\"\n" +
+                "                        }\n" +
+                "                    ]\n" +
+                "                }\n" +
+                "            ]\n" +
+                "        }\n" +
+                "    }\n" +
+                "}";
 
-        HttpResponse<JsonNode> response = Unirest.post(JiraConfig.BASE_URL + "/issue")
+        // Sending the POST request to create the defect using the raw JSON string
+        HttpResponse<JsonNode> response = Unirest.post(JiraConfig.BASE_URL)
                 .header("Authorization", JiraConfig.AUTH)
                 .header("Accept", "application/json")
                 .header("Content-Type", "application/json")
-                .body(defectPayload)
+                .body(jsonPayload) // Using the raw JSON string here
                 .asJson();
 
+        // Checking the response status and printing the result
         if (response.getStatus() == 201) {
             String issueIdOrKey = response.getBody().getObject().getString("key");
             System.out.println("Defect Created: " + issueIdOrKey);
             return issueIdOrKey;
+        } else if (response.getStatus() == 200) {
+            System.out.println("Request was successful but returned no issue key.");
         } else {
             System.out.println("Failed to create defect: " + response.getStatusText());
-            return null;
         }
+        return null;
     }
 }

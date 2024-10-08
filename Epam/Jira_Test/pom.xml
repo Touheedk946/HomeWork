@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.example</groupId>
         <artifactId>Epam</artifactId>
@@ -25,21 +26,28 @@
             <version>3.11.11</version>
         </dependency>
 
-        <!-- JSON processing library (optional, can be used for JSON handling) -->
+        <!-- Google Gson for JSON processing -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+
+        <!-- org.json library for JSON handling -->
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20220320</version>
         </dependency>
 
-        <!-- SLF4J API for logging (optional) -->
+        <!-- SLF4J API for logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.36</version>
         </dependency>
 
-        <!-- Logback for SLF4J implementation (optional) -->
+        <!-- Logback as SLF4J implementation -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -47,4 +55,26 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!-- Surefire plugin for running tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <printSummary>true</printSummary>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <forkCount>1</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <trimStackTrace>false</trimStackTrace>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <includes>
+                        <include>**/*Test*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -3,7 +3,7 @@ Feature: Coffee API
   Scenario: verify coffee creation updating and deletion of coffee
     Given I create a "hot" coffee
       |title    |description |ingredients  |image          |id            |
-      |hotCoffee|coffee500021| powder,suger|coffeeImg      |1122331     |
+      |hotCoffee|coffee500021| powder,suger|coffeeImg      |11223310     |
 
     Then I verify response status as 201
     And I verify response time is less then 5000 ms

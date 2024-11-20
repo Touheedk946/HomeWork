@@ -17,6 +17,8 @@
         <module>Jira_Test</module>
         <module>BDD</module>
         <module>ShoppingPortalAutomation</module>
+        <module>TestNG_Program</module>
+        <module>SmokeTesting</module>
     </modules>
 
     <properties>

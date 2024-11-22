@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke and Regression Suite" parallel="tests" thread-count="2">
+    <test name="Smoke Tests">
+        <groups>
+            <define name="smoke"/>
+        </groups>
+        <classes>
+            <class name="tests.SampleTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests">
+        <groups>
+            <define name="regression"/>
+        </groups>
+        <classes>
+            <class name="tests.SampleTest"/>
+        </classes>
+    </test>
+</suite>

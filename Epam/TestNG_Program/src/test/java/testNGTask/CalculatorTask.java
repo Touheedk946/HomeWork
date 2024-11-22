@@ -2,7 +2,7 @@ package testNGTask;
 
 
 
-import org.example.Calculator;
+import utils.example.Calculator;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

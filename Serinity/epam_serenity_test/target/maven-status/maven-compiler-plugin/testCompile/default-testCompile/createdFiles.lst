@@ -1,0 +1,7 @@
+com\epam\helpers\CoffeeHelper.class
+com\epam\model\Coffee$CoffeeBuilder.class
+com\epam\model\Coffee.class
+com\epam\model\CoffeeGet.class
+com\epam\testRunner\SerenityTestRunner.class
+com\epam\model\Ingredient.class
+com\epam\stepdefs\CoffeeStepDefs.class

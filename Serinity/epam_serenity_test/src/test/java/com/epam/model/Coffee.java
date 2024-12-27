@@ -3,7 +3,6 @@ package com.epam.model;
 
 import lombok.Builder;
 import lombok.Data;
-
 import java.util.List;
 @Data
 @Builder

@@ -31,9 +31,6 @@ public class CoffeeStepDefs {
                     .build();
             coffeeHelper.createCoffee(coffeeType, coffee);
             Serenity.setSessionVariable("Coffee").to(coffee);
-
-
-
         });
     }
 
@@ -67,5 +64,4 @@ public class CoffeeStepDefs {
         String coffeeID = String.valueOf(((Coffee) Serenity.sessionVariableCalled("Coffee")).getId());
         coffeeHelper.verifyGetCoffee(coffeeType,coffeeID);
     }
-
 }

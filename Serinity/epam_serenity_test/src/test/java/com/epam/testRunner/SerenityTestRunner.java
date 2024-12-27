@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 /**
  * This is the test runner class for Serenity with Cucumber tests.
- * It uses the CucumberWithSerenity runner to run the tests.
+ * It uses the CucumberWithSerenity runner to run the tests .
  */
 //@RunWith(CucumberWithSerenity.class)
 @RunWith(CucumberSerenityRunner.class)

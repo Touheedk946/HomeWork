@@ -9,7 +9,6 @@ import org.hamcrest.Matchers;
 public class CoffeeHelper {
     @Step
     public void createCoffee(String coffeeType , Coffee coffee){
-
         SerenityRest
                 .given()
                 .baseUri("http://api.sampleapis.com/coffee")

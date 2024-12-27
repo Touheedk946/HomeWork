@@ -2,13 +2,13 @@
 <suite name="Calculator Test Suite" parallel="methods" thread-count="4">
     <listeners>
         <!-- Listener for custom test behavior -->
-        <listener class-name="com.example.calculator.listeners.CustomTestListener" />
+        <listener class-name="tests.example.calculator.listeners.CustomTestListener" />
     </listeners>
 
     <!-- Suite-wide setup and teardown -->
     <test name="Calculator Functionality Tests">
         <classes>
-            <class name="com.example.calculator.CalculatorTest">
+            <class name="tests.example.calculator.CalculatorTest">
                 <methods>
                     <!-- TestNG Groups -->
                     <include name="positiveTests" />
@@ -23,7 +23,7 @@
 
     <test name="Dependency Tests">
         <classes>
-            <class name="com.example.calculator.CalculatorTest">
+            <class name="tests.example.calculator.CalculatorTest">
                 <methods>
                     <!-- Adding tests that depend on other test groups -->
                     <include name="dependentTests" />
@@ -34,7 +34,7 @@
 
     <test name="Parameterized and Parallel Tests">
         <classes>
-            <class name="com.example.calculator.CalculatorTest">
+            <class name="tests.example.calculator.CalculatorTest">
                 <methods>
                     <!-- Including parameterized test -->
                     <include name="testAddWithDataProvider" />

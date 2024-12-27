@@ -19,85 +19,26 @@
     </properties>
 
     <dependencies>
-        <!-- REST Assured Dependency for API Testing -->
+        <!-- RestAssured for API testing -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.3.0</version>
-            <scope>compile</scope>
         </dependency>
-
-        <!-- TestNG Dependency for Testing Framework -->
+        <!-- TestNG for testing framework -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.8.0</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Apache POI Dependency (for Excel file handling) -->
+        <!-- JSON for response handling -->
         <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>5.2.5</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
         </dependency>
-
-        <!-- Cucumber Java Dependency for BDD Step Definitions -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.11.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Cucumber TestNG Dependency for integrating Cucumber with TestNG -->
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>7.11.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Lombok Dependency (for simplifying code) -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.28</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <!-- Apache HTTPClient Dependencies -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.4.13</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.8.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>4.14.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>4.14.0</version>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <!-- Maven Compiler Plugin to set Java version -->

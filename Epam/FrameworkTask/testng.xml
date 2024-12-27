@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite">
+    <test name="Login Tests">
+        <classes>
+            <class name="com.automation.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Data Driven Tests">
+        <classes>
+            <class name="com.automation.tests.DataDrivenTest"/>
+        </classes>
+    </test>
+
+    <test name="Batch Tests">
+        <classes>
+            <class name="com.automation.tests.BatchTest"/>
+        </classes>
+    </test>
+</suite>

@@ -21,8 +21,8 @@
         <module>SmokeTesting</module>
         <module>automation-framework</module>
         <module>Jira</module>
-        <module>Java8Moduels</module>
         <module>JavaProgramsJava8</module>
+        <module>FrameworkTask</module>
     </modules>
 
     <properties>

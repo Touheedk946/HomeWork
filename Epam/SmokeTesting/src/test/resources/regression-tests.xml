@@ -2,7 +2,7 @@
 <suite name="RegressionSuite">
     <test name="RegressionTests">
         <packages>
-            <package name="org.example.regression" />
+            <package name="org.automation.regression" />
         </packages>
     </test>
 </suite>

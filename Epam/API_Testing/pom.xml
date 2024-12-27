@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.example</groupId>
         <artifactId>Epam</artifactId>
@@ -16,7 +17,9 @@
         <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
+        <!-- REST Assured Dependency for API Testing -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -24,6 +27,7 @@
             <scope>compile</scope>
         </dependency>
 
+        <!-- TestNG Dependency for Testing Framework -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -31,27 +35,22 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <!-- Apache POI Dependency (for Excel file handling) -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>5.2.5</version>
         </dependency>
 
-
+        <!-- Lombok Dependency (Use the latest version) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version> <!-- Use the latest version -->
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.28</version>
+            <version>1.18.28</version> <!-- Only include the latest version -->
             <scope>provided</scope>
         </dependency>
 
+        <!-- Apache HTTPClient Dependencies -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -63,11 +62,11 @@
             <version>4.4.13</version>
         </dependency>
 
-
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin to set Java version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -79,6 +78,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

@@ -2,58 +2,55 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Parent POM -->
     <parent>
         <groupId>org.example</groupId>
         <artifactId>Epam</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- Optional: Add if parent is in a different location -->
     </parent>
 
-    <!-- Project Information -->
-    <artifactId>Jira</artifactId>
+    <artifactId>API_Testing</artifactId>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- Dependencies -->
     <dependencies>
+        <!-- RestAssured for API testing -->
         <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.0</version>
         </dependency>
+        <!-- TestNG for testing framework -->
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.8.0</version>
+            <scope>test</scope>
         </dependency>
-      <!--  <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
-        </dependency>-->
+        <!-- JSON for response handling -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
+        </dependency>
     </dependencies>
-
-    <!-- Build Configuration -->
     <build>
         <plugins>
+            <!-- Maven Compiler Plugin to set Java version -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>1.8</source> <!-- Adjust according to your JDK version -->
+                    <target>1.8</target> <!-- Adjust according to your JDK version -->
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

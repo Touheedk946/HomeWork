@@ -8,20 +8,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.Serenity;
-import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Shared;
-import com.epam.model.Ingredient;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 public class CoffeeStepDefs {
-
-
     @Shared
     CoffeeHelper coffeeHelper;
-
 
     @Given("I create a {string} coffee")
     public void createCoffee(String coffeeType, List<Map<String,String>> coffeeList){
@@ -70,7 +65,7 @@ public class CoffeeStepDefs {
     public void verifyCoffeeDeleted(){
         String coffeeType =(String) Serenity.getCurrentSession().get("CoffeeType");
         String coffeeID = String.valueOf(((Coffee) Serenity.sessionVariableCalled("Coffee")).getId());
-        coffeeHelper.getCoffee(coffeeType,coffeeID);
+        coffeeHelper.verifyGetCoffee(coffeeType,coffeeID);
     }
 
 }

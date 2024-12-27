@@ -52,7 +52,7 @@ public class CoffeeHelper {
     }
 
     @Step
-    public void getCoffee(String coffeeType ,String coffee){
+    public void verifyGetCoffee (String coffeeType , String coffee){
         SerenityRest
                 .given()
                 .baseUri("http://api.sampleapis.com/coffee")

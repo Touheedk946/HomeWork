@@ -1,4 +1,4 @@
-package utils.example;
+package com.example;
 
 public class Application {
 }

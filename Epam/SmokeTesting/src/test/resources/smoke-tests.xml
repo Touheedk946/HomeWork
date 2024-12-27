@@ -2,7 +2,7 @@
 <suite name="SmokeSuite">
     <test name="SmokeTests">
         <packages>
-            <package name="org.example.smoke" />
+            <package name="org.automation.smoke" />
         </packages>
     </test>
 </suite>

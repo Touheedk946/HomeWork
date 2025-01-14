@@ -1,6 +1,7 @@
 package com.example.jira.operations;
 
 import com.example.jira.client.JiraClient;
+import org.codehaus.jettison.json.JSONObject;
 
 public class IssueOperations {
 
@@ -11,12 +12,29 @@ public class IssueOperations {
     }
 
     public String createIssue(String projectKey, String summary, String description) throws Exception {
+        // Construct the JSON payload for creating an issue
         String jsonPayload = String.format(
                 "{ \"fields\": { \"project\": { \"key\": \"%s\" }, \"summary\": \"%s\", \"description\": \"%s\", \"issuetype\": { \"name\": \"Bug\" } } }",
                 projectKey, summary, description
         );
-        return jiraClient.sendPost("/rest/api/3/issue", jsonPayload);
+
+        // Call JiraClient to send the POST request
+        String response = jiraClient.sendPost("/rest/api/3/issue", jsonPayload);
+
+        // Log the response for debugging purposes
+        System.out.println("Create Issue Response: " + response);
+
+        // Parse the response JSON
+        if (response.contains("errorMessages") || response.contains("errors")) {
+            // Handle error responses by throwing an exception with details
+            throw new Exception("Failed to create issue. Response: " + response);
+        }
+
+        // Extract the 'id' field from the JSON response
+        JSONObject jsonResponse = new JSONObject(response);
+        return jsonResponse.getString("id");
     }
+
 
     public void updateIssue(String issueIdOrKey, String newSummary) throws Exception {
         String jsonPayload = String.format("{ \"fields\": { \"summary\": \"%s\" } }", newSummary);
